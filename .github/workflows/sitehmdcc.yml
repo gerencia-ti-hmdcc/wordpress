@@ -1,18 +1,14 @@
-name: 'Site HMDCC'
+name: 'Wordpress to Site HMDCC'
 
 on:
   push:
     branches:
-      - 'oci'
-  # pull_request:
-  #   branches:
-  #     - 'main'
-  #   types:
-  #     - closed
+      - 'main'
 
 jobs:
   container:
-    name: 'sitehmdcc'
+    environment: oci
+    name: 'wordpress to site hmdcc'
     runs-on: ubuntu-latest
     env:
       OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
@@ -20,56 +16,15 @@ jobs:
       OCI_CLI_FINGERPRINT: ${{ secrets.OCI_CLI_FINGERPRINT }}
       OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
-      NEXT_PUBLIC_WP_BASE_URL: ${{vars.NEXT_PUBLIC_WP_BASE_URL}}
-      NEXT_PUBLIC_BASE_URL: ${{vars.NEXT_PUBLIC_BASE_URL}}
-    
-
-      NEXT_PUBLIC_SUPABASE_SERVICE_KEY: ${{vars.NEXT_PUBLIC_SUPABASE_SERVICE_KEY}}
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{vars.NEXT_PUBLIC_SUPABASE_ANON_KEY}}
-      NEXT_PUBLIC_SUPABASE_URL: ${{vars.NEXT_PUBLIC_SUPABASE_URL}}
-
-      GOOGLE_CLIENT_ID: ${{vars.GOOGLE_CLIENT_ID}}
-      GOOGLE_CLIENT_SECRET: ${{vars.GOOGLE_CLIENT_SECRET}}
-      JWT_SECRET: ${{vars.JWT_SECRET}}
-      NEXTAUTH_URL: ${{vars.NEXTAUTH_URL}}
-
-      SMTP_HOST: ${{vars.SMTP_HOST}}
-      SMTP_PORT: ${{vars.SMTP_PORT}}
-      SMTP_USER: ${{secrets.SMTP_USER}}
-      SMTP_PASSWORD: ${{secrets.SMTP_PASSWORD}}
-
-      NEXT_EMAIL_OUVIDORIA: ${{vars.NEXT_EMAIL_OUVIDORIA}}
-      NEXT_EMAIL_DPO: ${{vars.NEXT_EMAIL_DPO}}
-      NEXT_EMAIL_VISITA_TECNICA: ${{vars.NEXT_EMAIL_VISITA_TECNICA}}
-
-      HASH_VALIDATOR: ${{vars.HASH_VALIDATOR}}
-
-      MYSQL_HOST_PROD: ${{vars.MYSQL_HOST_PROD}}
-      MYSQL_USER_PROD: ${{secrets.MYSQL_USER_PROD}}
-      MYSQL_PASSWORD_PROD: ${{secrets.MYSQL_PASSWORD_PROD}}
-      MYSQL_DATABASE_PROD: ${{vars.MYSQL_DATABASE_PROD}}
-      MYSQL_DATABASE_HMDCC_SITE_PROD: ${{vars.MYSQL_DATABASE_HMDCC_SITE_PROD}}
-
-      PORTAL_VUE_MOTION_BASE_URL: ${{vars.PORTAL_VUE_MOTION_BASE_URL}}
-
-      ALGAR_ENCRYPT_BASE_URL: ${{vars.ALGAR_ENCRYPT_BASE_URL}}
-
-      PRODABEL_ENCRYPT_BASE_URL: ${{vars.PRODABEL_ENCRYPT_BASE_URL}}
-      VUE_MOTION_USERNAME: ${{secrets.VUE_MOTION_USERNAME}}
-      VUE_MOTION_PASSWORD: ${{secrets.VUE_MOTION_PASSWORD}}
-
-      DIRETORIO_ARQUIVOS: ${{vars.DIRETORIO_ARQUIVOS}}
+      WORDPRESS_DB_HOST: ${{ vars.WORDPRESS_DB_HOST }}
+      WORDPRESS_DB_USER: ${{ vars.WORDPRESS_DB_USER }}
+      WORDPRESS_DB_PASSWORD: ${{ vars.WORDPRESS_DB_PASSWORD }}
+      WORDPRESS_DB_NAME: "hmdcc_site"
+      WORDPRESS_TABLE_PREFIX: "apswp_"
        
     steps:
 
     - if: github.event_name == 'push'
-      name: Generate build number NextJS
-      id: buildnumber
-      uses: onyxmueller/build-tag-number@v1
-      with:
-        token: ${{secrets.BUILD_GITHUB_TOKEN}}
-
-    - if: github.event_name == 'push' && github.ref_name == 'v1.0'
       name: Generate build number Wordpress
       id: buildnumber_wordpress
       uses: onyxmueller/build-tag-number@v1
@@ -92,29 +47,13 @@ jobs:
       id: buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Build and push NextJS
-      if: github.event_name == 'push'
-      id: docker_build_nextjs
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        file: ./Dockerfile
-        push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/hmdcc:sitehmdcc-v1.${{ steps.buildnumber.outputs.build_number }}
-        build-args: |
-          NEXT_PUBLIC_WP_BASE_URL=${{ env.NEXT_PUBLIC_WP_BASE_URL }}
-          NEXT_PUBLIC_BASE_URL=${{ env.NEXT_PUBLIC_BASE_URL }}
-          NEXT_PUBLIC_SUPABASE_URL=${{ env.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_SERVICE_KEY=${{ env.NEXT_PUBLIC_SUPABASE_SERVICE_KEY }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ env.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-
     - name: Build and push Wordpress
-      if: github.event_name == 'push' && github.ref_name == 'v1.0'
+      if: github.event_name == 'push'
       id: docker_build_wordpress
       uses: docker/build-push-action@v5
       with:
         context: .
-        file: ./wordpress/Dockerfile
+        file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/hmdcc:wordpress-v1.${{ steps.buildnumber_wordpress.outputs.build_number }}
 
@@ -123,29 +62,17 @@ jobs:
       id: Configure-kubectl-oke-action
       with:
         cluster: ${{ secrets.OKE_CLUSTER_OCID }}
-
-    - name: Replace image tag in deployment manifest
-      if: github.event_name == 'push'
-      run: |
-        export TAG=${{ steps.buildnumber.outputs.build_number }}
-        envsubst < k8s/sitehmdcc-deployment.yml > k8s/sitehmdcc-deployment-final.yml
     
     - name: Replace image tag in wordpress deployment manifest
-      if: github.event_name == 'push' && github.ref_name == 'v1.0'
+      if: github.event_name == 'push'
       run: |
         export TAG_WORDPRESS=${{ steps.buildnumber_wordpress.outputs.build_number }}
         envsubst < k8s/wordpress-deployment.yml > k8s/wordpress-deployment-final.yml
-
-    - name: Deploy NextJs to OCI Kubernetes
+    
+    - name: Deploy Wordpress to OCI Kubernetes
       if: github.event_name == 'push'
       run: |
         export OCI_CLI_SUPPRESS_FILE_PERMISSIONS_WARNING=True
-        kubectl apply -f k8s/sitehmdcc-ingressroute-traefik.yml
-        kubectl apply -f k8s/sitehmdcc-certificate.yml
-        kubectl apply -f k8s/sitehmdcc-deployment-final.yml
-    
-    - name: Deploy Wordpress to OCI Kubernetes
-      if: github.event_name == 'push' && github.ref_name == 'v1.0'
-      run: |
-        export OCI_CLI_SUPPRESS_FILE_PERMISSIONS_WARNING=True
+        kubectl apply -f k8s/wordpress-ingressroute.yml
+        kubectl apply -f k8s/wordpress-certificate.yml
         kubectl apply -f k8s/wordpress-deployment-final.yml
