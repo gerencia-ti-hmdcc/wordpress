@@ -16,6 +16,8 @@ spec:
       #   - name: wordpress-storage
       #     persistentVolumeClaim:
       #       claimName: wordpress-object-pvc # Nome do PVC criado no Passo 2
+      imagePullSecrets:
+        - name: dockerhub-secret # O nome do Secret que você criou
       containers:
       - name: wordpress
         image: gerenciatihmdcc/hmdcc:wordpress-v1.${TAG_WORDPRESS}
