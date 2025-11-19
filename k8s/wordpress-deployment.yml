@@ -23,23 +23,17 @@ spec:
         - containerPort: 80
         env:
           - name: WORDPRESS_TABLE_PREFIX
-            value: "apswp_"
+            value: ${WORDPRESS_TABLE_PREFIX}
           # - name: WORDPRESS_DEBUG
           #   value: "1"
           - name: WORDPRESS_DB_HOST
-            value: "192.168.5.70"
+            value: ${WORDPRESS_DB_HOST}
           - name: WORDPRESS_DB_USER
-            valueFrom: # Obtém o valor do Secret
-              secretKeyRef:
-                name: app-mysql-credentials
-                key: MYSQL_USERNAME
+            value: ${WORDPRESS_DB_USER}
           - name: WORDPRESS_DB_PASSWORD
-            valueFrom: # Obtém o valor do Secret
-              secretKeyRef:
-                name: app-mysql-credentials
-                key: MYSQL_PASSWORD
+            value: ${WORDPRESS_DB_PASSWORD}
           - name: WORDPRESS_DB_NAME
-            value: "hmdcc_site"
+            value: ${WORDPRESS_DB_NAME}
         resources:
           requests:
             memory: "250Mi"
