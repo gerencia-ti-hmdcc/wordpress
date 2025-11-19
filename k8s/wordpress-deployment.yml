@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-deployment
+spec:
+  replicas: 1 # Update the replicas from 2 to 4
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      # volumes:
+      #   - name: wordpress-storage
+      #     persistentVolumeClaim:
+      #       claimName: wordpress-object-pvc # Nome do PVC criado no Passo 2
+      containers:
+      - name: wordpress
+        image: gerenciatihmdcc/hmdcc:wordpress-v1.${TAG_WORDPRESS}
+        ports:
+        - containerPort: 80
+        env:
+          - name: WORDPRESS_TABLE_PREFIX
+            value: "apswp_"
+          # - name: WORDPRESS_DEBUG
+          #   value: "1"
+          - name: WORDPRESS_DB_HOST
+            value: "192.168.5.70"
+          - name: WORDPRESS_DB_USER
+            valueFrom: # Obtém o valor do Secret
+              secretKeyRef:
+                name: app-mysql-credentials
+                key: MYSQL_USERNAME
+          - name: WORDPRESS_DB_PASSWORD
+            valueFrom: # Obtém o valor do Secret
+              secretKeyRef:
+                name: app-mysql-credentials
+                key: MYSQL_PASSWORD
+          - name: WORDPRESS_DB_NAME
+            value: "hmdcc_site"
+        resources:
+          requests:
+            memory: "250Mi"
+            cpu: "500m"
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-service
+spec:
+  selector:
+    app: wordpress
+  ports:
+    - port: 80
+      name: web
+      protocol: TCP
+      targetPort: 80 # Refere-se a porta containerPort
+  type: ClusterIP

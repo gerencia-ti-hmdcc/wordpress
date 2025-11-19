@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: sitehmdcc-ingressroute-certificate
+  namespace: default
+spec:
+  # Secret names are always required.
+  secretName: sitehmdcc-certificate-secret
+  issuerRef:
+    name: cloudflare-clusterissuer
+    kind: ClusterIssuer
+  dnsNames: # deve ser o mesmo do IngressRoute
+    - hmdcc.org.br
+    - www.hmdcc.org.br

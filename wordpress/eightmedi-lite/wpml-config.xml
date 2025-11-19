@@ -1,0 +1,38 @@
+<wpml-config>
+    <admin-texts>
+        <key name="theme_mods_eightmedi-lite">
+            <key name="eightmedi_lite_callto_text" />
+            <key name="eightmedi_lite_callto_text_right" />
+            <key name="eightmedi_lite_slider_cta_btntext" />
+            <key name="eightmedi_lite_slider_cta_btnlink" />
+            <key name="eightmedi_lite_featured_title" />
+            <key name="eightmedi_lite_appointment_title" />
+            <key name="eightmedi_lite_appointment_desc" />
+            <key name="eightmedi_lite_appointment_formid" />
+            <key name="eightmedi_lite_aboutus_viewmore_text" />
+            <key name="eightmedi_lite_teammember_title" />
+            <key name="eightmedi_lite_teammember_desc" />
+            <key name="eightmedi_lite_callto_title" />
+            <key name="eightmedi_lite_callto_desc" />
+            <key name="eightmedi_lite_callto_readmore" />
+            <key name="eightmedi_lite_callto_link" />
+            <key name="eightmedi_lite_news_title" />
+            <key name="eightmedi_lite_news_desc" />
+            <key name="eightmedi_lite_news_button_text" />
+            <key name="eightmedi_lite_sponsers_title" />
+            <key name="eightmedi_lite_callto_small_title" />
+            <key name="eightmedi_lite_callto_readmore_small" />
+            <key name="eightmedi_lite_callto_link_small" />
+            <key name="eightmedi_lite_contact_address" />
+            <key name="eightmedi_lite_social_facebook" />
+            <key name="eightmedi_lite_social_twitter" />
+            <key name="eightmedi_lite_social_googleplus" />
+            <key name="eightmedi_lite_social_youtube" />
+            <key name="eightmedi_lite_social_pinterest" />
+            <key name="eightmedi_lite_social_linkedin" />
+            <key name="eightmedi_lite_social_vimeo" />
+            <key name="eightmedi_lite_social_instagram" />
+            <key name="eightmedi_lite_social_skype" />
+        </key>
+    </admin-texts>
+</wpml-config>

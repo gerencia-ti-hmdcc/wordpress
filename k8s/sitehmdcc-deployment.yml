@@ -1,0 +1,118 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sitehmdcc-deployment
+spec:
+  replicas: 2 # Update the replicas from 2 to 4
+  selector:
+    matchLabels:
+      app: sitehmdcc
+  template:
+    metadata:
+      labels:
+        app: sitehmdcc
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret # O nome do Secret que você criou
+      # securityContext:
+      #   fsGroup: 33 # Mantém a permissão de grupo no volume FSS
+      # volumes:
+      #   - name: sitehmdcc-volume
+      #     persistentVolumeClaim:
+      #       claimName: sitehmdcc-pvc # Nome do PersistentVolumeClaim
+      containers:
+      - name: sitehmdcc
+        image: gerenciatihmdcc/hmdcc:sitehmdcc-v1.${TAG}
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+        # volumeMounts:
+        #   - mountPath: /media/sitehmdcc
+        #     name: sitehmdcc-volume
+        env:
+          - name: NEXT_PUBLIC_WP_BASE_URL
+            value: ${NEXT_PUBLIC_WP_BASE_URL}
+          - name: NEXT_PUBLIC_BASE_URL
+            value: ${NEXT_PUBLIC_BASE_URL}
+
+          - name: NEXT_PUBLIC_SUPABASE_SERVICE_KEY
+            value: ${NEXT_PUBLIC_SUPABASE_SERVICE_KEY}
+          - name: NEXT_PUBLIC_SUPABASE_ANON_KEY
+            value: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+          - name: NEXT_PUBLIC_SUPABASE_URL
+            value: ${NEXT_PUBLIC_SUPABASE_URL}
+
+          - name: GOOGLE_CLIENT_ID
+            value: ${GOOGLE_CLIENT_ID}
+          - name: GOOGLE_CLIENT_SECRET
+            value: ${GOOGLE_CLIENT_SECRET}
+          - name: JWT_SECRET
+            value: ${JWT_SECRET}
+          - name: NEXTAUTH_URL
+            value: ${NEXTAUTH_URL}
+
+          - name: SMTP_HOST
+            value: ${SMTP_HOST}
+          - name: SMTP_PORT
+            value: ${SMTP_PORT}
+          - name: SMTP_USER
+            value: ${SMTP_USER}
+          - name: SMTP_PASSWORD
+            value: ${SMTP_PASSWORD}
+
+          - name: NEXT_EMAIL_OUVIDORIA
+            value: ${NEXT_EMAIL_OUVIDORIA}
+          - name: NEXT_EMAIL_DPO
+            value: ${NEXT_EMAIL_DPO}
+          - name: NEXT_EMAIL_VISITA_TECNICA
+            value: ${NEXT_EMAIL_VISITA_TECNICA}
+
+          - name: HASH_VALIDATOR
+            value: ${HASH_VALIDATOR}
+
+          - name: MYSQL_HOST_PROD
+            value: "209.133.221.162"
+          - name: MYSQL_USER_PROD
+            value: ${MYSQL_USER_PROD}
+          - name: MYSQL_PASSWORD_PROD
+            value: ${MYSQL_PASSWORD_PROD}
+          - name: MYSQL_DATABASE_PROD
+            value: ${MYSQL_DATABASE_PROD}
+          - name: MYSQL_DATABASE_HMDCC_SITE_PROD
+            value: ${MYSQL_DATABASE_HMDCC_SITE_PROD}
+
+          - name: PORTAL_VUE_MOTION_BASE_URL
+            value: ${PORTAL_VUE_MOTION_BASE_URL}
+
+          - name: ALGAR_ENCRYPT_BASE_URL
+            value: ${ALGAR_ENCRYPT_BASE_URL}
+
+          - name: PRODABEL_ENCRYPT_BASE_URL
+            value: ${PRODABEL_ENCRYPT_BASE_URL}
+          - name: VUE_MOTION_USERNAME
+            value: ${VUE_MOTION_USERNAME}
+          - name: VUE_MOTION_PASSWORD
+            value: ${VUE_MOTION_PASSWORD}
+          - name: DIRETORIO_ARQUIVOS
+            value: ${DIRETORIO_ARQUIVOS}      
+        resources:
+          requests:
+            memory: "250Mi"
+            cpu: "500m"
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-sitehmdcc
+spec:
+  selector:
+    app: sitehmdcc
+  ports:
+    - port: 80
+      name: web
+      protocol: TCP
+      targetPort: 3000 # Refere-se a porta containerPort
+  type: ClusterIP

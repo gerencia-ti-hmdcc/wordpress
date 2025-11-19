@@ -1,0 +1,1159 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Eightmedi Lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-11 09:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: footer.php:32
+msgid " by 8Degree Themes"
+msgstr ""
+
+#: inc/template-tags.php:68
+msgid "% Comments"
+msgstr ""
+
+#: inc/eightmedi-custom-classes.php:15
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: inc/template-tags.php:51 inc/template-tags.php:58
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:68
+msgid "1 Comment"
+msgstr ""
+
+#: 404.php:21
+msgid "404"
+msgstr ""
+
+#: welcome/step-fifth.php:16
+msgid ""
+"45+ premium WordPress plugins of many different types. High user ratings, "
+"great quality and best sellers in CodeCanyon marketplace."
+msgstr ""
+
+#: welcome/step-fifth.php:13
+msgid ""
+"6 premium WordPress themes well suited for all sort of websites. "
+"Professional, well coded and highly configurable themes for you."
+msgstr ""
+
+#. Author of the theme
+#: welcome/step-fifth.php:22
+msgid "8Degree Themes"
+msgstr ""
+
+#: welcome/step-fifth.php:22
+msgid ""
+"8Degree Themes offers 15+ free WordPress themes and 16+ premium WordPress "
+"themes  carefully crafted with creativity."
+msgstr ""
+
+#: welcome/step-fifth.php:10
+msgid ""
+"A complete WordPress resources club. WordPress tutorials, blogs, curated "
+"free and premium themes and plugins, WordPress deals, offers, hosting info "
+"and more."
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:57 welcome/eightmedi_lite_about.php:59
+msgid "About EightMedi Lite"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:28
+msgid "About Eightmedi Lite"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:476
+msgid "About Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:527
+msgid "About View More Text"
+msgstr ""
+
+#: welcome/step-fifth.php:19
+msgid "AccessPress Themes"
+msgstr ""
+
+#: welcome/step-fifth.php:19
+msgid ""
+"AccessPress Themes has 50+ beautiful and elegant, fully responsive, "
+"multipurpose themes to meet your need for free and commercial basis."
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:14 welcome/step-demo.php:49
+#: welcome/step-second.php:33
+msgid "Activate"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:15
+msgid "Activated"
+msgstr ""
+
+#: functions.php:150
+msgid "Add a text widget with iframe for google map"
+msgstr ""
+
+#: functions.php:160
+msgid "Add widgets for footer"
+msgstr ""
+
+#: inc/eightmedi-functions.php:386
+msgid ""
+"After you import this demo, you might have to setup the menu separately."
+msgstr ""
+
+#: welcome/step-fifth.php:8
+msgid ""
+"AND IF THIS THEME HAS IMPRESSED YOU, THEN YOU WOULD ENJOY OUR OTHER PROJECTS "
+"TOO. DO CHECK THESE OUT :"
+msgstr ""
+
+#: welcome/step-demo.php:4
+msgid "And Make sure you download demo in a fresh install."
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:18
+msgid "Are you sure to import demo content ?"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:468
+msgid "Background Image for Book an Appointment"
+msgstr ""
+
+#: template-boxedhome.php:88 template-home.php:73 template-logocenter.php:174
+#: template-notopheader.php:173
+msgid "Book An Appointment"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:435
+msgid "Book an Appointment Custom Form Id"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:422
+msgid "Book an Appointment Description"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:378
+msgid "Book an Appointment Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:409
+msgid "Book an Appointment Title"
+msgstr ""
+
+#: template-boxedhome.php:368 template-home.php:353 template-logocenter.php:454
+#: template-notopheader.php:453 inc/eightmedi-customizer.php:952
+msgid "Book Now"
+msgstr ""
+
+#: inc/eightmedi-metabox.php:46
+msgid "Both Sidebar"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:57 inc/eightmedi-sanitizer.php:87
+msgid "Boxed"
+msgstr ""
+
+#. Name of the template
+msgid "Boxed HomePage"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:851
+msgid "Button Text"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:709 inc/eightmedi-customizer.php:973
+msgid "Call To Action Link"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:695
+msgid "Call To Action Read More Text"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:635
+msgid "Call To Action Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:667
+msgid "Call To Action Title"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:89
+msgid "Call To Content  - Left"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:101
+msgid "Call To Content  - Right"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:681
+msgid "Call To Description"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:455 inc/eightmedi-sanitizer.php:62
+msgid "Center"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:142
+msgid "Center Align"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:110
+msgid "Changelog"
+msgstr ""
+
+#: welcome/step-first.php:30
+msgid "Check our documentation"
+msgstr ""
+
+#: welcome/step-third.php:28
+msgid ""
+"Check our yoututbe video tutorials on setting up themes as well as general "
+"setups. Do not forget to Subscribe to get more videos notifications."
+msgstr ""
+
+#: inc/eightmedi-customizer.php:450
+msgid "Choose alignment of form"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:540
+msgid "Choose alignment of image"
+msgstr ""
+
+#: inc/eightmedi-metabox.php:66
+msgid "Choose Sidebar Template"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:52 inc/eightmedi-customizer.php:596
+#: inc/eightmedi-customizer.php:734
+msgid "Choose the layout that you want"
+msgstr ""
+
+#: welcome/step-first.php:13 welcome/step-first.php:14
+msgid "Click here if you need help!"
+msgstr ""
+
+#: welcome/step-first.php:24
+msgid "Click Me to import demo contents."
+msgstr ""
+
+#: welcome/step-first.php:16
+msgid "Click Me to install recommended plugins."
+msgstr ""
+
+#: comments.php:39 comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:76
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: comment number, 2: post title
+#: comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/eightmedi-customizer.php:1003
+msgid "Contact Address"
+msgstr ""
+
+#: welcome/step-third.php:5 welcome/step-third.php:9
+msgid "Contact Support"
+msgstr ""
+
+#: template-boxedhome.php:389 template-home.php:374 template-logocenter.php:475
+#: template-notopheader.php:474
+msgid "Contact Us"
+msgstr ""
+
+#: welcome/step-first.php:13
+msgid "Create a post, post category, page."
+msgstr ""
+
+#: welcome/step-first.php:39
+msgid "Customize everything"
+msgstr ""
+
+#: welcome/step-demo.php:43 welcome/step-second.php:37
+msgid "Deactivate"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:141
+msgid "Default (Left Align)"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:19
+msgid "Default Setups"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:17
+msgid "Demo Installed"
+msgstr ""
+
+#: template-boxedhome.php:139 template-home.php:124 template-logocenter.php:225
+#: template-notopheader.php:224
+msgid "Details"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:345 inc/eightmedi-customizer.php:396
+#: inc/eightmedi-customizer.php:494 inc/eightmedi-customizer.php:570
+#: inc/eightmedi-customizer.php:653 inc/eightmedi-customizer.php:764
+#: inc/eightmedi-customizer.php:821 inc/eightmedi-customizer.php:839
+#: inc/eightmedi-customizer.php:878 inc/eightmedi-customizer.php:932
+#: inc/eightmedi-sanitizer.php:51
+msgid "Disable"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:834
+msgid "Display Button for Category Page"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:216
+msgid "Display Controls"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:200
+msgid "Display Pager"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:171
+msgid "Display Slider"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1043
+msgid "Display Social Icons in Footer"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1027
+msgid "Display Social Icons in Header"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:264
+msgid "Display Text in Slider"
+msgstr ""
+
+#: welcome/step-third.php:15
+msgid "Documentation"
+msgstr ""
+
+#: inc/template-tags.php:72 template-parts/content-page.php:26
+msgid "Edit"
+msgstr ""
+
+#: footer.php:31
+msgid "EightMedi Lite"
+msgstr ""
+
+#. Name of the theme
+msgid "Eightmedi Lite"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:451
+msgid "EightMedi Lite Demo"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"EightMedi Lite is free responsive medical WordPress theme ideal for creating "
+"websites for doctors, surgeons, medical personnels, health centres, "
+"hospitals, clinics, pharmacies etc. EightMedi Lite comes with a lot of "
+"awesome of features: Clean and elegant design, Full-width or Boxed layout, "
+"Beautifully designed homepage sections - Featured posts section, News/blog "
+"section, Appointment form section, Team section , Slider options, Sidebar "
+"options, Social icons, Google fonts, Header configuration, Advanced "
+"typography, etc. See Demo here : https://8degreethemes.com/demos/?"
+"theme=eightmedi-lite . Need Support : support@8degreethemes.com"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:83
+msgid ""
+"EightMedi Lite is now installed and ready to use! Get ready to build "
+"something beautiful. We hope you enjoy it! We want to make sure you have the "
+"best experience using EightMedi Lite and that is why we gathered here all "
+"the necessary information for you. We hope you will enjoy using EightMedi "
+"Lite, as much as we enjoy creating great products."
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:24
+msgid "Email us"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:344 inc/eightmedi-customizer.php:395
+#: inc/eightmedi-customizer.php:493 inc/eightmedi-customizer.php:569
+#: inc/eightmedi-customizer.php:652 inc/eightmedi-customizer.php:763
+#: inc/eightmedi-customizer.php:820 inc/eightmedi-customizer.php:838
+#: inc/eightmedi-customizer.php:877 inc/eightmedi-customizer.php:931
+#: inc/eightmedi-sanitizer.php:50
+msgid "Enable"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:232
+msgid "Enable Auto Transition"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:489
+msgid "Enable Disable About Us Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:391
+msgid "Enable Disable Book an Appointment"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:648
+msgid "Enable Disable Call To Action"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:340
+msgid "Enable Disable Featured Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:816
+msgid "Enable Disable News Date"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:759
+msgid "Enable Disable News Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:927
+msgid "Enable Disable Small Call To Action"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:873
+msgid "Enable Disable Sponsers Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:565
+msgid "Enable Disable Team Member"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:73
+msgid "Enable Top Header"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:436
+msgid "Enter shortcode for Custom Form Id"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:90 inc/eightmedi-customizer.php:102
+msgid "Enter text or HTML for call to action"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1005
+msgid "Enter the Contact Address Detail, add google map from widgets section"
+msgstr ""
+
+#: 404.php:21
+msgid "error"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:322 welcome/eightmedi_lite_about.php:409
+msgid "Error - unable to verify nonce, please try again."
+msgstr ""
+
+#: welcome/step-first.php:31
+msgid ""
+"Even if you're a long-time WordPress user, we still believe you should give "
+"our documentation a very quick Read."
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1059
+msgid "Facebook"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:252
+msgid "Fade"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:327
+msgid "Featured Section"
+msgstr ""
+
+#: welcome/step-first.php:11
+msgid "Follow below actions"
+msgstr ""
+
+#: functions.php:158
+msgid "Footer Blocks"
+msgstr ""
+
+#: footer.php:31
+msgid "Free WordPress Theme"
+msgstr ""
+
+#: welcome/step-first.php:33
+msgid "Full documentation"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:56 inc/eightmedi-customizer.php:600
+#: inc/eightmedi-sanitizer.php:24 inc/eightmedi-sanitizer.php:86
+msgid "Full Width"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:34
+msgid "General Setups"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:282
+msgid "Get started with EightMedi Lite"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:94
+msgid "Getting Started"
+msgstr ""
+
+#: welcome/step-first.php:42
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:992
+msgid "Google Map"
+msgstr ""
+
+#: functions.php:148
+msgid "Google Map Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1083
+msgid "Google Plus"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:601 inc/eightmedi-sanitizer.php:25
+msgid "Half - Half"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:127
+msgid "Header Logo Alignment Setting"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:107
+msgid "Header Search Setting"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:21 inc/admin-panel/theme-info.php:22
+#: inc/admin-panel/theme-info.php:23 inc/admin-panel/theme-info.php:25
+msgid "here"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:117
+msgid "Hide Search From Header"
+msgstr ""
+
+#. Name of the template
+msgid "Home Page"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:151
+msgid "Homepage Setups"
+msgstr ""
+
+#. Name of the template
+msgid "HomePage with Logo Center"
+msgstr ""
+
+#. Name of the template
+msgid "HomePage without Top Header"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://8degreethemes.com/"
+msgstr ""
+
+#. URI of the theme
+#: footer.php:31
+msgid "https://demo.8degreethemes.com/eightmedi-lite/"
+msgstr ""
+
+#: welcome/step-first.php:23
+msgid ""
+"If you like to have a site as similar like our demo then, go to Import Demo "
+"tab and do the needfuls."
+msgstr ""
+
+#: inc/eightmedi-customizer.php:721
+msgid "Image for Call to Action"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:985
+msgid "Image for Small Call to Action"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:102
+msgid "Import Demo"
+msgstr ""
+
+#: welcome/step-first.php:22
+msgid "Import Demo Contents"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1143
+msgid "Instagram"
+msgstr ""
+
+#: welcome/step-second.php:29 welcome/step-second.php:44
+msgid "Install"
+msgstr ""
+
+#. 1: plugin name.
+#: welcome/step-demo.php:19 welcome/step-demo.php:57
+#, php-format
+msgid "Install : %s Plugin"
+msgstr ""
+
+#: welcome/step-demo.php:37
+msgid "Install and Activate"
+msgstr ""
+
+#: welcome/step-first.php:15
+msgid "Install required/recommerded plugins (if any)."
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:16
+msgid "Installing Demo"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:34
+msgid "Instant Demo Importer"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:40
+msgid ""
+"Instant Demo Importer Plugin adds the feature to Import the Demo Conent with "
+"a single click."
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try search?"
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: inc/eightmedi-customizer.php:688
+msgid "Join"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:357
+msgid "Latest featured Title"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:746
+msgid "Latest News Section"
+msgstr ""
+
+#: inc/template-tags.php:68
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:454 inc/eightmedi-customizer.php:544
+#: inc/eightmedi-customizer.php:738 inc/eightmedi-sanitizer.php:61
+msgid "Left"
+msgstr ""
+
+#: functions.php:128
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/eightmedi-metabox.php:36
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1119
+msgid "Linkedin"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:138
+msgid "Logo Alignment"
+msgstr ""
+
+#: template-boxedhome.php:350 template-home.php:335 template-logocenter.php:436
+#: template-notopheader.php:435 inc/eightmedi-customizer.php:939
+msgid "Make Your Appointment Today"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:35
+msgid "Manage General Setups for the site"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:160
+msgid "Manage Slides for the site"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:25
+msgid "More Details"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:114
+msgid "More WordPress Stuff"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:20
+msgid "Need help?"
+msgstr ""
+
+#: comments.php:43 comments.php:64
+msgid "Newer Comments"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:777
+msgid "News Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:790
+msgid "News Section Description"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:78 inc/eightmedi-customizer.php:122
+#: inc/eightmedi-customizer.php:175 inc/eightmedi-customizer.php:204
+#: inc/eightmedi-customizer.php:220 inc/eightmedi-customizer.php:236
+#: inc/eightmedi-customizer.php:268 inc/eightmedi-customizer.php:1031
+#: inc/eightmedi-customizer.php:1047 inc/eightmedi-sanitizer.php:13
+#: inc/eightmedi-sanitizer.php:75
+msgid "No"
+msgstr ""
+
+#: inc/eightmedi-metabox.php:52
+msgid "No sidebar"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: comments.php:42 comments.php:63
+msgid "Older Comments"
+msgstr ""
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: template-boxedhome.php:161 template-home.php:146 template-logocenter.php:247
+#: template-notopheader.php:246
+msgid "Our Doctors"
+msgstr ""
+
+#: template-boxedhome.php:248 template-home.php:233 template-logocenter.php:334
+#: template-notopheader.php:333 inc/eightmedi-customizer.php:771
+msgid "Our Journal"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:860
+msgid "Our Sponsers Section"
+msgstr ""
+
+#: template-boxedhome.php:314 template-home.php:299 template-logocenter.php:400
+#: template-notopheader.php:399 inc/eightmedi-customizer.php:885
+msgid "Our Sponsors"
+msgstr ""
+
+#: template-parts/content-page.php:19 template-parts/content-single.php:29
+#: template-parts/content.php:34
+msgid "Pages:"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1107
+msgid "Pinterest"
+msgstr ""
+
+#: template-boxedhome.php:132 template-home.php:117 template-logocenter.php:218
+#: template-notopheader.php:217
+msgid "Placehold"
+msgstr ""
+
+#: welcome/step-demo.php:20
+msgid ""
+"Please check the plugins folder inside theme and upload the zip of plugins "
+"from plugin uploader."
+msgstr ""
+
+#: welcome/step-demo.php:3
+msgid "Please install Recommended Plugins for demo to be imported completely."
+msgstr ""
+
+#. post author
+#: inc/template-tags.php:35
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. post date
+#: inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:55
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: welcome/step-fifth.php:16
+msgid "Premium WordPress Plugins"
+msgstr ""
+
+#: welcome/step-fifth.php:13
+msgid "Premium WordPress Themes"
+msgstr ""
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr ""
+
+#: template-boxedhome.php:290 template-home.php:275 template-logocenter.php:376
+#: template-notopheader.php:375
+msgid "Read More"
+msgstr ""
+
+#. post new link
+#: template-parts/content-none.php:22
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: welcome/step-second.php:50
+msgid "Recommended"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:98
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:456 inc/eightmedi-customizer.php:545
+#: inc/eightmedi-customizer.php:739 inc/eightmedi-sanitizer.php:63
+msgid "Right"
+msgstr ""
+
+#: functions.php:138
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/eightmedi-metabox.php:41
+msgid "Right sidebar<br/>(default)"
+msgstr ""
+
+#: searchform-header.php:9
+msgid "Search"
+msgstr ""
+
+#. search query
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: welcome/step-third.php:20
+msgid "See our full documentation"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:904
+msgid "Select a Category to show in  sponsers Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:370
+msgid "Select a Category to show in featured Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:803
+msgid "Select a Category to show in latest news Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:187
+msgid "Select a category to show in slider"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:513
+msgid "Select a Post to show in About Us Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:74
+msgid "Selecting No will Hide Top Header"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:118
+msgid "Selecting Yes will Hide Search Bar From Header"
+msgstr ""
+
+#: welcome/step-first.php:14
+msgid ""
+"Set page you created to load a custom template \"Homepage\" that came with "
+"theme and set it as frontpage."
+msgstr ""
+
+#: functions.php:118
+msgid "Sidebar"
+msgstr ""
+
+#. $id
+#: inc/eightmedi-metabox.php:16 inc/eightmedi-metabox.php:24
+msgid "Sidebar Layout"
+msgstr ""
+
+#: header.php:23 template-logocenter.php:36 template-notopheader.php:36
+msgid "Skip to content"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1155
+msgid "Skype"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:251
+msgid "Slide"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:293
+msgid "Slide Pause Time"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:319
+msgid "Slider CTA Button Link"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:306
+msgid "Slider CTA Button Text"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:159
+msgid "Slider Setups"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:959
+msgid "Small Call To Action Read More Text"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:914
+msgid "Small Call To Action Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:945
+msgid "Small Call To Action Title"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1015
+msgid "Social Links Section"
+msgstr ""
+
+#: template-parts/content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:402
+msgid "Sorry, you are not allowed to activate plugins on this site."
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:315
+msgid "Sorry, you are not allowed to install plugins on this site."
+msgstr ""
+
+#: inc/eightmedi-customizer.php:891
+msgid "Sponsors Section"
+msgstr ""
+
+#: welcome/step-first.php:10
+msgid "Step 1"
+msgstr ""
+
+#: welcome/step-first.php:21
+msgid "Step 2"
+msgstr ""
+
+#: welcome/step-first.php:29
+msgid "Step 3"
+msgstr ""
+
+#: welcome/step-first.php:38
+msgid "Step 4"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:106
+msgid "Support"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:22
+msgid "Support forum"
+msgstr ""
+
+#: welcome/step-third.php:7
+msgid "support@8degreethemes.com"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:62
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:552
+msgid "Team Member Section"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:613
+msgid "Team Memeber Description"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:583
+msgid "Team Memeber Title"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:10
+msgid "Theme Information"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:431
+msgid "There was an error activating $api->name"
+msgstr ""
+
+#: welcome/step-third.php:17
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentation is an incredible resource for learning the ins and outs "
+"of using our theme."
+msgstr ""
+
+#: inc/eightmedi-customizer.php:62
+msgid "Top Header Call-To"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:281
+msgid "Transition Speed"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:248
+msgid "Transition Type"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1071
+msgid "Twitter"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:87
+msgid "UPGRADE TO Eightmedi PRO"
+msgstr ""
+
+#: welcome/step-first.php:40
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: welcome/step-second.php:58
+msgid "Version:"
+msgstr ""
+
+#: welcome/step-third.php:26
+msgid "Video Tutorials"
+msgstr ""
+
+#: template-boxedhome.php:251 template-boxedhome.php:255 template-home.php:236
+#: template-home.php:240 template-logocenter.php:337
+#: template-logocenter.php:341 template-notopheader.php:336
+#: template-notopheader.php:340 inc/eightmedi-customizer.php:845
+msgid "View All"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:21
+msgid "View documentation"
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:23
+msgid "View Video tutorials"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1131
+msgid "Vimeo"
+msgstr ""
+
+#: welcome/step-third.php:7
+msgid ""
+"We offer excellent support through our website support forum. Just Register "
+"and Post your query and you will be responded by one of our representatives. "
+"Or you can send email at "
+msgstr ""
+
+#: welcome/step-first.php:12
+msgid ""
+"We've made a checklist for you to take while setting up with our theme. Go "
+"through this and you can have your website ready in minutes."
+msgstr ""
+
+#: inc/eightmedi-customizer.php:41
+msgid "Webpage Layout"
+msgstr ""
+
+#: welcome/eightmedi_lite_about.php:80
+msgid "Welcome to EightMedi Lite! - Version "
+msgstr ""
+
+#. 1: link open, 2: link close.
+#: welcome/eightmedi_lite_about.php:281
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing EightMedi Lite! To fully take advantage of "
+"the best our theme can offer please make sure you visit our %1$swelcome "
+"page%2$s."
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:41
+msgid "WordPress Resources"
+msgstr ""
+
+#: footer.php:31
+msgid "WordPress Theme : "
+msgstr ""
+
+#: inc/admin-panel/theme-info.php:38
+msgid "WordPress Tutorials and Resources"
+msgstr ""
+
+#: welcome/step-fifth.php:10
+msgid "WPAll Club"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:77 inc/eightmedi-customizer.php:121
+#: inc/eightmedi-customizer.php:174 inc/eightmedi-customizer.php:203
+#: inc/eightmedi-customizer.php:219 inc/eightmedi-customizer.php:235
+#: inc/eightmedi-customizer.php:267 inc/eightmedi-customizer.php:1030
+#: inc/eightmedi-customizer.php:1046 inc/eightmedi-sanitizer.php:12
+#: inc/eightmedi-sanitizer.php:74
+msgid "Yes"
+msgstr ""
+
+#: welcome/step-demo.php:5
+msgid "Your Old Data might be deleted."
+msgstr ""
+
+#: welcome/step-third.php:31
+msgid "YoutTube Videos"
+msgstr ""
+
+#: inc/eightmedi-customizer.php:1095
+msgid "YouTube"
+msgstr ""
