@@ -73,6 +73,6 @@ jobs:
       if: github.event_name == 'push'
       run: |
         export OCI_CLI_SUPPRESS_FILE_PERMISSIONS_WARNING=True
-        kubectl apply -f k8s/wordpress-ingressroute.yml
+        kubectl apply -f k8s/wordpress-ingressroute-traefik.yml
         kubectl apply -f k8s/wordpress-certificate.yml
         kubectl apply -f k8s/wordpress-deployment-final.yml
