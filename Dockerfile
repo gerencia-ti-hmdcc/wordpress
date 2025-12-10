@@ -6,6 +6,6 @@ WORKDIR /var/www/html
 
 ### Para customizar o wp-config.php
 #COPY wp-config.php .
-
+COPY wordpress/.htaccess ./
 COPY wordpress/eightmedi-lite/ ./wp-content/themes/eightmedi-lite/
 COPY wordpress/media-offload-for-oci/ ./wp-content/plugins/media-offload-for-oci/

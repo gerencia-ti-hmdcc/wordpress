@@ -1,0 +1,25 @@
+
+# INÍCIO DO REDIRECIONAMENTO PARA OCI OBJECT STORAGE
+RewriteEngine On
+
+# Condição: Verifica se o caminho começa com /wp-content/
+RewriteCond %{REQUEST_URI} ^/wp-content/(.*)$
+
+# Isso previne loops de redirecionamento. Substitua o hostname do seu bucket.
+RewriteCond %{HTTP_HOST} !^grbnljci3el5\.compat\.objectstorage\.sa-saopaulo-1\.oraclecloud\.com$ [NC]
+
+# - Captura o caminho (.*) após wp-content/ e o armazena em %1.
+# - Redireciona para o bucket OCI com o código 301 (Permanente).
+RewriteRule ^wp-content/(.*)$ https://grbnljci3el5.compat.objectstorage.sa-saopaulo-1.oraclecloud.com/wp-content/$1 [R=301,L]
+
+# BEGIN WordPress
+
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# END WordPress
+
