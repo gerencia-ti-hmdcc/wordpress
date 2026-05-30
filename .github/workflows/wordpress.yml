@@ -19,8 +19,8 @@ jobs:
       WORDPRESS_DB_HOST: ${{ secrets.WORDPRESS_DB_HOST }}
       WORDPRESS_DB_USER: ${{ secrets.WORDPRESS_DB_USER }}
       WORDPRESS_DB_PASSWORD: ${{ secrets.WORDPRESS_DB_PASSWORD }}
-      WORDPRESS_DB_NAME: "hmdcc_site"
-      WORDPRESS_TABLE_PREFIX: "apswp_"
+      WORDPRESS_DB_NAME: ${{ vars.WORDPRESS_DB_NAME }}
+      WORDPRESS_TABLE_PREFIX: ${{ vars.WORDPRESS_TABLE_PREFIX }}
        
     steps:
 
