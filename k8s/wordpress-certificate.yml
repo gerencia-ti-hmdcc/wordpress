@@ -11,3 +11,4 @@ spec:
     kind: ClusterIssuer
   dnsNames: # deve ser o mesmo do IngressRoute
     - wp.hmdcc.org.br
+    - wp.hmdcc.com.br
