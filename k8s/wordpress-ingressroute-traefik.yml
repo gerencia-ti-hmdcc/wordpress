@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`wp.hmdcc.com.br`)
+    - match: Host(`hmdcc.com.br`) && PathPrefix(`/wp-admin`)
       kind: Rule      
       services:
         - name: wordpress-service
