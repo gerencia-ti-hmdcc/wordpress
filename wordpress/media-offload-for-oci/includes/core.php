@@ -87,30 +87,98 @@ function artimeof_delete_local_files($id,$d){
     foreach ($p as $x) { if ( file_exists($x) ) { wp_delete_file( $x ); } }
 }
 
+// function artimeof_attachment_and_sizes($id,$d,$o){
+//     if (empty($d['file'])) return true;
+//     $u = wp_get_upload_dir();
+//     $bd = trailingslashit($u['basedir']);
+//     $files = array();
+//     $main = $d['file'];
+//     $files[] = $bd.$main;
+//     $dir = pathinfo($main, PATHINFO_DIRNAME);
+//     if (!empty($d['sizes']) && is_array($d['sizes'])) {
+//         foreach ($d['sizes'] as $inf) if (!empty($inf['file'])) $files[] = $bd.trailingslashit($dir).$inf['file'];
+//     }
+//     foreach ($files as $fp) {
+//         if (!file_exists($fp)) continue;
+//         $rel = ltrim(str_replace($bd,'',$fp),'/');
+//         $key = artimeof_object_key_for_attachment($id,$rel);
+//         $mime = 'application/octet-stream';
+//         if (function_exists('wp_check_filetype')) {
+//             $_ft = wp_check_filetype($fp);
+//             if (is_array($_ft) && !empty($_ft['type'])) $mime = $_ft['type'];
+//         }
+//         $put = artimeof_put_file($o,$key,$fp,$mime);
+//         if (is_wp_error($put)) return $put;
+//     }
+//     update_post_meta($id,'_oci_object_base',dirname($d['file']));
+//     return true;
+// }
+
+// Testar pegar o content-type
 function artimeof_attachment_and_sizes($id,$d,$o){
-    if (empty($d['file'])) return true;
+    // CORREÇÃO CRUCIAL: Arquivos que não são imagens (PDF, DOCX, TXT) não possuem a chave $d['file'] 
+    // dentro dos metadados normais. Se estiver vazio, buscamos o caminho real direto no banco de dados.
+    $main_file = !empty($d['file']) ? $d['file'] : get_post_meta($id, '_wp_attached_file', true);
+
+    if (empty($main_file)) {
+        return true; // Se mesmo assim não achar o arquivo, encerra.
+    }
+
     $u = wp_get_upload_dir();
     $bd = trailingslashit($u['basedir']);
     $files = array();
-    $main = $d['file'];
-    $files[] = $bd.$main;
-    $dir = pathinfo($main, PATHINFO_DIRNAME);
+    
+    // Monta o caminho absoluto do arquivo principal no servidor
+    $files[] = $bd . ltrim($main_file, '/');
+    
+    // Se for uma imagem e tiver sub-tamanhos (thumbnails), adiciona na fila de upload
+    $dir = pathinfo($main_file, PATHINFO_DIRNAME);
     if (!empty($d['sizes']) && is_array($d['sizes'])) {
-        foreach ($d['sizes'] as $inf) if (!empty($inf['file'])) $files[] = $bd.trailingslashit($dir).$inf['file'];
+        foreach ($d['sizes'] as $inf) {
+            if (!empty($inf['file'])) {
+                $files[] = $bd.trailingslashit($dir).$inf['file'];
+            }
+        }
     }
+
     foreach ($files as $fp) {
         if (!file_exists($fp)) continue;
         $rel = ltrim(str_replace($bd,'',$fp),'/');
         $key = artimeof_object_key_for_attachment($id,$rel);
-        $mime = 'application/octet-stream';
-        if (function_exists('wp_check_filetype')) {
-            $_ft = wp_check_filetype($fp);
-            if (is_array($_ft) && !empty($_ft['type'])) $mime = $_ft['type'];
+        
+        // Força o tipo de arquivo correto para evitar o erro de download e execução de scripts
+        $ext = strtolower(pathinfo($fp, PATHINFO_EXTENSION));
+        $mime = '';
+
+        switch ($ext) {
+            case 'js':   $mime = 'application/javascript'; break;
+            case 'css':  $mime = 'text/css'; break;
+            case 'svg':  $mime = 'image/svg+xml'; break;
+            case 'jpg':
+            case 'jpeg': $mime = 'image/jpeg'; break;
+            case 'png':  $mime = 'image/png'; break;
+            case 'gif':  $mime = 'image/gif'; break;
+            case 'pdf':  $mime = 'application/pdf'; break;
+            case 'txt':  $mime = 'text/plain'; break;
+            case 'docx': $mime = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'; break;
+            case 'doc':  $mime = 'application/msword'; break;
+            default:
+                if (function_exists('wp_check_filetype')) {
+                    $_ft = wp_check_filetype($fp);
+                    if (is_array($_ft) && !empty($_ft['type'])) $mime = $_ft['type'];
+                }
+                break;
         }
+
+        if (empty($mime)) {
+            $mime = 'application/octet-stream';
+        }
+
         $put = artimeof_put_file($o,$key,$fp,$mime);
         if (is_wp_error($put)) return $put;
     }
-    update_post_meta($id,'_oci_object_base',dirname($d['file']));
+    
+    update_post_meta($id,'_oci_object_base',dirname($main_file));
     return true;
 }
 
