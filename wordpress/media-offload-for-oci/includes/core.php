@@ -151,7 +151,7 @@ function artimeof_attachment_and_sizes($id,$d,$o){
         $mime = '';
 
         switch ($ext) {
-            case 'js':   $mime = 'application/javascript'; break;
+            //case 'js':   $mime = 'application/javascript'; break;
             case 'css':  $mime = 'text/css'; break;
             case 'svg':  $mime = 'image/svg+xml'; break;
             case 'jpg':
@@ -161,7 +161,9 @@ function artimeof_attachment_and_sizes($id,$d,$o){
             case 'pdf':  $mime = 'application/pdf'; break;
             case 'txt':  $mime = 'text/plain'; break;
             case 'docx': $mime = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'; break;
+			case 'xlsx': $mime = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'; break;
             case 'doc':  $mime = 'application/msword'; break;
+			case 'xls':  $mime = 'application/vnd.ms-excel'; break;
             default:
                 if (function_exists('wp_check_filetype')) {
                     $_ft = wp_check_filetype($fp);
