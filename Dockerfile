@@ -16,3 +16,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
 COPY wordpress/.htaccess ./
 COPY wordpress/eightmedi-lite/ ./wp-content/themes/eightmedi-lite/
 COPY wordpress/media-offload-for-oci/ ./wp-content/plugins/media-offload-for-oci/
+COPY wordpress/jetpack/ ./wp-content/plugins/jetpack/
+COPY wordpress/all-in-one-seo-pack/ ./wp-content/plugins/all-in-one-seo-pack/
+COPY wordpress/ml-slider ./wp-content/plugins/ml-slider
