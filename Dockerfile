@@ -6,13 +6,11 @@ ENV TZ=America/Sao_Paulo
 
 # Configura o fuso horário no sistema operacional e no PHP
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
-    && echo "date.timezone = America/Sao_Paulo" > /usr/local/etc/php/conf.d/timezone.ini
+&& echo "date.timezone = America/Sao_Paulo" > /usr/local/etc/php/conf.d/timezone.ini
 
-### Para customizar o php.ini
-# COPY custom.ini $PHP_INI_DIR/conf.d/
+ENV WORDPRESS_CONFIG_EXTRA="define('WPLANG', 'pt_BR'); define('TZ', 'America/Sao_Paulo');"
 
-### Para customizar o wp-config.php
-#COPY wp-config.php .
+
 COPY wordpress/.htaccess ./
 COPY wordpress/eightmedi-lite/ ./wp-content/themes/eightmedi-lite/
 COPY wordpress/media-offload-for-oci/ ./wp-content/plugins/media-offload-for-oci/

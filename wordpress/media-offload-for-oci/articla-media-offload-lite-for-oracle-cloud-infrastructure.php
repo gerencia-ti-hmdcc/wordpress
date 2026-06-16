@@ -18,6 +18,7 @@ define( 'ARTIMEOF_LITE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ARTIMEOF_LITE_URL', plugin_dir_url( __FILE__ ) );
 define( 'ARTIMEOF_LITE_OPT', 'artimeof_settings' );
 define( 'ARTIMEOF_LITE_LOG', 'artimeof_logs' );
+define( 'ARTIMEOF_CDN_URL', 'https://www2.hmdcc.com.br/wp-content' );
 
 
 

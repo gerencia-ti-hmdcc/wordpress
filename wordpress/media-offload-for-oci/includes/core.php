@@ -40,6 +40,12 @@ function artimeof_config_ready($o){
 
 
 function artimeof_compute_base_url($o){
+    // Custom CDN URL for public delivery (proxy to OCI)
+    if ( defined( 'ARTIMEOF_CDN_URL' ) && ! empty( ARTIMEOF_CDN_URL ) ) {
+        return ARTIMEOF_CDN_URL;
+    }
+    
+    // Fallback to OCI URL if custom CDN not configured
     if (empty($o['namespace']) || empty($o['region']) || empty($o['bucket'])) return '';
     $h = $o['namespace'] . '.compat.objectstorage.' . $o['region'] . '.oraclecloud.com';
     return 'https://' . $h . '/' . rawurlencode($o['bucket']);
@@ -87,32 +93,6 @@ function artimeof_delete_local_files($id,$d){
     foreach ($p as $x) { if ( file_exists($x) ) { wp_delete_file( $x ); } }
 }
 
-// function artimeof_attachment_and_sizes($id,$d,$o){
-//     if (empty($d['file'])) return true;
-//     $u = wp_get_upload_dir();
-//     $bd = trailingslashit($u['basedir']);
-//     $files = array();
-//     $main = $d['file'];
-//     $files[] = $bd.$main;
-//     $dir = pathinfo($main, PATHINFO_DIRNAME);
-//     if (!empty($d['sizes']) && is_array($d['sizes'])) {
-//         foreach ($d['sizes'] as $inf) if (!empty($inf['file'])) $files[] = $bd.trailingslashit($dir).$inf['file'];
-//     }
-//     foreach ($files as $fp) {
-//         if (!file_exists($fp)) continue;
-//         $rel = ltrim(str_replace($bd,'',$fp),'/');
-//         $key = artimeof_object_key_for_attachment($id,$rel);
-//         $mime = 'application/octet-stream';
-//         if (function_exists('wp_check_filetype')) {
-//             $_ft = wp_check_filetype($fp);
-//             if (is_array($_ft) && !empty($_ft['type'])) $mime = $_ft['type'];
-//         }
-//         $put = artimeof_put_file($o,$key,$fp,$mime);
-//         if (is_wp_error($put)) return $put;
-//     }
-//     update_post_meta($id,'_oci_object_base',dirname($d['file']));
-//     return true;
-// }
 
 // Testar pegar o content-type
 function artimeof_attachment_and_sizes($id,$d,$o){
