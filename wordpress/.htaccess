@@ -3,7 +3,7 @@
 RewriteEngine On
 
 # Condição: Verifica se o caminho começa com /wp-content/
-# RewriteCond %{REQUEST_URI} ^/wp-content/(.*)$
+ RewriteCond %{REQUEST_URI} ^/wp-content/(.*)$
 
 # Isso previne loops de redirecionamento. Substitua o hostname do seu bucket.
 # RewriteCond %{HTTP_HOST} !^grbnljci3el5\.compat\.objectstorage\.sa-saopaulo-1\.oraclecloud\.com$ [NC]
@@ -11,6 +11,7 @@ RewriteEngine On
 # - Captura o caminho (.*) após wp-content/ e o armazena em %1.
 # - Redireciona para o bucket OCI com o código 301 (Permanente).
 # RewriteRule ^wp-content/(.*)$ https://grbnljci3el5.compat.objectstorage.sa-saopaulo-1.oraclecloud.com/wp-content/$1 [R=301,L]
+  RewriteRule ^wp-content/(.*)$ https://www2.hmdcc.com.br/wp-content/$1 [R=301,L]
 
 # BEGIN WordPress
 
